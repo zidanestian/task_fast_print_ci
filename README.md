@@ -32,6 +32,7 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan aplikasi ini:
 
    Clone repository ini ke dalam direktori lokal Anda:
    git clone https://github.com/zidanestian/task_fast_print_ci.git
+   cd task_fast_print_ci
    
 2. **Konfigurasi Database**
 
