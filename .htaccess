@@ -1,0 +1,15 @@
+RewriteEngine On
+
+RewriteCond $1 !^(index\.php|resources|robots\.txt|public)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?/$1 [QSA,L]
+
+# Block access to .gitignore and other sensitive files
+<FilesMatch "(\.gitignore|\.git|\.htaccess|\.htpasswd|composer.json|composer.lock|cached.appcache|README.md)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+
+php_value pcre.backtrack_limit 10000000
